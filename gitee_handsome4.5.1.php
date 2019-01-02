@@ -4,6 +4,9 @@
  *
  * @package custom
  */
+ 
+//此模板针对handsome4.5.1版本主题，其他版本请看说明文档
+
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 ?>
