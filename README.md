@@ -20,6 +20,10 @@
 5. 添加自定义字符，自定义字符名gitee，值为你的gitee账户名称
 6. 发布独立页面即可
 
+#### 其他版本修改办法
+
+请参考：[typecho博客gitee独立页面](https://www.rumosky.com/archives/97.html)
+
 #### 反馈建议
 
 本人主页：[如默星空](https://www.rumosky.com)
