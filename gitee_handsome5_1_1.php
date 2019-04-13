@@ -1,0 +1,143 @@
+<?php
+/**
+ * gitee项目列表
+ *
+ * @package custom
+ */
+if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+
+?>
+
+<?php $this->need('component/header.php'); ?>
+
+	<!-- aside -->
+	<?php $this->need('component/aside.php'); ?>
+	<!-- / aside -->
+
+<!-- <div id="content" class="app-content"> -->
+   <a class="off-screen-toggle hide"></a>
+   <main class="app-content-body <?php Content::returnPageAnimateClass($this); ?>">
+    <div class="hbox hbox-auto-xs hbox-auto-sm">
+    <!--文章-->
+     <div class="col center-part">
+         <div class="bg-light lter b-b wrapper-md">
+             <h1 class="m-n font-thin h3"><i class="iconfont icon-fork i-sm m-r-sm"></i><?php _me("项目展示") ?></h1>
+             <div class="entry-meta text-muted  m-b-none small post-head-icon"><?php echo $this->fields->intro; ?></div>
+         </div>
+      <div class="wrapper-md" id="post-panel">
+       <!--博客文章样式 begin with .blog-post-->
+       <div id="postpage" class="blog-post">
+        <article class="panel">
+        <!--文章页面的头图-->
+            <?php echo Content::exportHeaderImg($this); ?>
+         <!--文章内容-->
+         <div id="post-content" class="wrapper-lg">
+          <div class="l-h-2x row">
+              <?php echo Content::postContent($this,$this->user->hasLogin()); ?>
+              <small class="text-muted letterspacing gitee_tips"></small>
+              <!--gitee--->
+              <div class="gitee_page">
+                  <nav class="loading-nav text-center m-t-lg m-b-lg">
+                      <p class="infinite-scroll-request"><i class="animate-spin fontello
+                      fontello-refresh"></i><?php _me("Loading……") ?></p>
+                  </nav>
+                  <nav class="error-nav hide text-center m-t-lg m-b-lg">
+                      <p class="infinite-scroll-request"><i class="glyphicon
+                            glyphicon-refresh"></i>加载失败！尝试重新加载</p>
+                  </nav>
+              </div>
+          </div>
+         </div>
+        </article>
+       </div>
+       <!--评论-->
+        <?php $this->need('component/comments.php') ?>
+      </div>
+     </div>
+     <!--文章右侧边栏开始-->
+    <?php $this->need('component/sidebar.php'); ?>
+     <!--文章右侧边栏结束-->
+    </div>
+
+       <?php
+
+       $giteeUser = $this->fields->gitee;
+
+       if ($giteeUser == "" || $giteeUser == null){
+           echo '<script>$(".gitee_tips").text("请填写正确的gitee用户名，主题检查gitee用户为空或者错误，已经切换rumosky用户仓库项目。");</script>';
+           $giteeUser = 'rumosky_admin';
+       }
+
+       ?>
+       <script type="text/javascript">
+            var giteeItemTemple = '<div class="col-xs-12 col-sm-6">'+
+                '<div class="panel b-light {BG_COLOR}">\n' +
+                '        <div class="panel-body"><div class="gitee_language">{PROJECT_LANGUAGE}</div>' +
+                '          \n' +
+                '          <div class="clear">\n' +
+                '            <span class="text-ellipsis font-thin h3">{REPO_NAME}</span>\n' +
+                '            <small class="block m-sm"><i class="iconfont icon-star m-r-xs"></i>{REPO_STARS} stars / <i class="iconfont icon-fork"></i> {REPO_FORKS} forks</small>\n' +
+                    '<small class="text-ellipsis block text-muted">{REPO_DESC}</small>'+
+                '<a target="_blank" href="{REPO_URL}" class="m-sm btn btn-rounded btn-sm lter btn-{BUTTON_COLOR}"><i class="glyphicon glyphicon-hand-up"></i>访问</a>' +
+                '          </div>\n' +
+                '        </div>\n' +
+                '      </div>'+
+                '</div>';
+
+
+           var open = function(){
+
+               var handlegitee = function(){
+                   var repoContainer = $('.gitee_page');
+                   var loadingContainer = repoContainer.find(".loading-nav");
+                   var errorContainer = repoContainer.find(".error-nav");
+                   var countContainer = $(".gitee_tips");
+                   var colors = ["light","info","dark","success","black","warning","primary","danger"];
+                   $.get("https://gitee.com/api/v5/users/<?php echo $giteeUser; ?>/repos",function(result){
+                       if(result){
+                           loadingContainer.addClass("hide");
+                           var ul = $("<div class='raw'><div class='col-md-12'><div class=\"row row-sm text-center " +
+                               "gitee_contain" +
+                               "\"></div></div></div>");
+                           repoContainer.append(ul);
+                           var contentContainer = $(".gitee_contain");
+                           for(var i in result){
+                               var repo = result[i];
+                               repo.updated_at = repo.updated_at.substring(0,repo.updated_at.lastIndexOf("T"));
+                               if (repo.language == null){
+                                   repo.language = "未知";
+                               }
+                               //匹配替换
+                               var item = giteeItemTemple.replace("{REPO_NAME}",repo.name)
+                                   .replace("{REPO_URL}",repo.html_url)
+                                   .replace("{REPO_STARS}",repo.stargazers_count)
+                                   .replace("{REPO_FORKS}",repo.forks_count)
+                                   .replace("{REPO_DESC}",repo.description)
+                                   .replace("{BG_COLOR}","bg-"+colors[i % 8])
+                                   .replace("{BUTTON_COLOR}",colors[(i) % 8])
+                                   .replace("{PROJECT_LANGUAGE}",repo.language);
+                               contentContainer.append(item);
+                           }
+                       }else{
+                           errorContainer.removeClass("hide");
+                       }
+                   });
+               };
+
+               return {
+                   init : function(){
+                       handlegitee();
+                   }
+               }
+           };
+
+           $(open().init);
+
+       </script>
+   </main>
+
+
+    <!-- footer -->
+	<?php $this->need('component/footer.php'); ?>
+  	<!-- / footer -->
+
