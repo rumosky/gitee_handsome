@@ -1,7 +1,8 @@
-# test
+# gitee_handsome
 
 #### 介绍
 typecho博客程序，handsome主题gitee独立页面，修改自handsome主题GitHub独立页面。
+(与handsome主题同步更新)
 
 #### 目录结构
 ```text
