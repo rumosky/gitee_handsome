@@ -34,9 +34,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
          <div id="post-content" class="wrapper-lg">
           <div class="l-h-2x row">
               <?php echo Content::postContent($this,$this->user->hasLogin()); ?>
-              <small class="text-muted letterspacing gitee_tips"></small>
-              <!--gitee--->
-              <div class="gitee_page">
+              <small class="text-muted letterspacing github_tips"></small>
+              <!--github--->
+              <div class="github_page">
                   <nav class="loading-nav text-center m-t-lg m-b-lg">
                       <p class="infinite-scroll-request"><i class="animate-spin fontello
                       fontello-refresh"></i><?php _me("Loading……") ?></p>
@@ -61,18 +61,18 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
        <?php
 
-       $giteeUser = $this->fields->gitee;
+       $githubUser = $this->fields->gitee;
 
-       if ($giteeUser == "" || $giteeUser == null){
-           echo '<script>$(".gitee_tips").text("请填写正确的gitee用户名，主题检查gitee用户为空或者错误，已经切换rumosky用户仓库项目。");</script>';
-           $giteeUser = 'rumosky_admin';
+       if ($githubUser == "" || $githubUser == null){
+           echo '<script>$(".github_tips").text("请填写正确的gitee用户名，主题检查gitee用户为空或者错误，已经切换rumosky用户仓库项目。");</script>';
+           $githubUser = 'rumosky_admin';
        }
 
        ?>
        <script type="text/javascript">
-            var giteeItemTemple = '<div class="col-xs-12 col-sm-6">'+
+            var githubItemTemple = '<div class="col-xs-12 col-sm-6">'+
                 '<div class="panel b-light {BG_COLOR}">\n' +
-                '        <div class="panel-body"><div class="gitee_language">{PROJECT_LANGUAGE}</div>' +
+                '        <div class="panel-body"><div class="github_language">{PROJECT_LANGUAGE}</div>' +
                 '          \n' +
                 '          <div class="clear">\n' +
                 '            <span class="text-ellipsis font-thin h3">{REPO_NAME}</span>\n' +
@@ -87,20 +87,20 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
            var open = function(){
 
-               var handlegitee = function(){
-                   var repoContainer = $('.gitee_page');
+               var handleGithub = function(){
+                   var repoContainer = $('.github_page');
                    var loadingContainer = repoContainer.find(".loading-nav");
                    var errorContainer = repoContainer.find(".error-nav");
-                   var countContainer = $(".gitee_tips");
+                   var countContainer = $(".github_tips");
                    var colors = ["light","info","dark","success","black","warning","primary","danger"];
-                   $.get("https://gitee.com/api/v5/users/<?php echo $giteeUser; ?>/repos",function(result){
+                   $.get("https://gitee.com/api/v5/users/<?php echo $githubUser; ?>/repos",function(result){
                        if(result){
                            loadingContainer.addClass("hide");
                            var ul = $("<div class='raw'><div class='col-md-12'><div class=\"row row-sm text-center " +
-                               "gitee_contain" +
+                               "github_contain" +
                                "\"></div></div></div>");
                            repoContainer.append(ul);
-                           var contentContainer = $(".gitee_contain");
+                           var contentContainer = $(".github_contain");
                            for(var i in result){
                                var repo = result[i];
                                repo.updated_at = repo.updated_at.substring(0,repo.updated_at.lastIndexOf("T"));
@@ -108,7 +108,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                                    repo.language = "未知";
                                }
                                //匹配替换
-                               var item = giteeItemTemple.replace("{REPO_NAME}",repo.name)
+                               var item = githubItemTemple.replace("{REPO_NAME}",repo.name)
                                    .replace("{REPO_URL}",repo.html_url)
                                    .replace("{REPO_STARS}",repo.stargazers_count)
                                    .replace("{REPO_FORKS}",repo.forks_count)
@@ -126,7 +126,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
                return {
                    init : function(){
-                       handlegitee();
+                       handleGithub();
                    }
                }
            };
@@ -140,4 +140,3 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <!-- footer -->
 	<?php $this->need('component/footer.php'); ?>
   	<!-- / footer -->
-
