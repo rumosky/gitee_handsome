@@ -9,14 +9,15 @@ typecho博客程序，handsome主题gitee独立页面，修改自handsome主题G
 ├──gitee_handsome4_5_1.php      //4.5.1版本gitee独立页面模板
 ├──gitee_handsome5_0.php       //5.0版本gitee独立页面模板
 ├──gitee_handsome5_1.php       //5.1版本gitee独立页面模板
-└──gitee_handsome5_1_1.php     //5.1.1版本gitee独立页面模板
+├──gitee_handsome5_1_1.php       //5.1.1版本gitee独立页面模板
+└──gitee_handsome5_2.php     //5.2版本gitee独立页面模板
 ```
 
 #### 说明
 
 使用方法：
 
-1. 下载gitee版独立页面
+1. 下载相应版本gitee独立页面
 2. 文件名称修改为`gitee.php`
 3. 将文件放在handsome主题根目录下
 4. 进入typecho后台，新增独立页面，模板选择gitee项目模板
