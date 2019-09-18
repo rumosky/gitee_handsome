@@ -4,8 +4,10 @@
 typecho博客程序，handsome主题gitee独立页面，修改自handsome主题GitHub独立页面。
 (与handsome主题同步更新)
 
-国内gitee地址：https://gitee.com/rumosky_admin/gitee_handsome
-GitHub地址：https://github.com/rumosky/gitee_handsome
+#### 项目地址
+
+1. 国内gitee地址：https://gitee.com/rumosky_admin/gitee_handsome
+2. GitHub地址：https://github.com/rumosky/gitee_handsome
 
 #### 目录结构
 ```text
