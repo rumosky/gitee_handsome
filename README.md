@@ -17,7 +17,8 @@ typecho博客程序，handsome主题gitee独立页面，修改自handsome主题G
 ├──gitee_handsome5_1_1.php       //5.1.1版本gitee独立页面模板
 ├──gitee_handsome5_2.php     //5.2版本gitee独立页面模板
 ├──gitee_handsome5_3.php     //5.3版本gitee独立页面模板
-└──gitee_handsome5_3_1.php     //5.3.1版本gitee独立页面模板
+├──gitee_handsome5_3_1.php     //5.3.1版本gitee独立页面模板
+└──gitee_handsome6_0.php     //6.0版本gitee独立页面模板
 ```
 
 #### 说明
