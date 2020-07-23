@@ -4,6 +4,13 @@
  *
  * @package custom
  */
+/*
+ * @Email: rumosky@163.com
+ * @Author: rumosky
+ * @Github: https://github.com/rumosky
+ * @Date: 2020-01-15 17:54:27
+ * @Description: handsome主题gitee独立页面5.1.1版本
+ */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 ?>

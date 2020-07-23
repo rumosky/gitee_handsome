@@ -1,8 +1,15 @@
 <?php
 /**
- * github项目列表
+ * gitee项目列表
  *
  * @package custom
+ */
+/*
+ * @Email: rumosky@163.com
+ * @Author: rumosky
+ * @Github: https://github.com/rumosky
+ * @Date: 2020-01-15 17:54:27
+ * @Description: handsome主题gitee独立页面5.3版本
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 

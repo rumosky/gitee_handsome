@@ -4,6 +4,13 @@
  *
  * @package custom
  */
+/*
+ * @Email: rumosky@163.com
+ * @Author: rumosky
+ * @Github: https://github.com/rumosky
+ * @Date: 2020-01-15 17:54:27
+ * @Description: handsome主题gitee独立页面6.0版本
+ */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 ?>
@@ -63,7 +70,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
        <?php
 
-       $githubUser = $this->fields->github;
+       $githubUser = $this->fields->gitee;
 
        if ($githubUser == "" || $githubUser == null){
            echo '<script>$(".github_tips").text("请填写正确的gitee用户名，主题检查gitee用户为空或者错误，已经切换rumosky用户仓库项目。");</script>';
