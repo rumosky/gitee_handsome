@@ -22,7 +22,8 @@ typecho 博客程序，handsome 主题 gitee 独立页面，修改自 handsome �
 ├──gitee_handsome5_3_1.php     //5.3.1版本gitee独立页面模板
 ├──gitee_handsome6_0.php     //6.0版本gitee独立页面模板
 ├──gitee_handsome7_0.php     //7.0版本gitee独立页面模板
-└──gitee_handsome7_1.php     //7.1版本gitee独立页面模板
+├──gitee_handsome7_1.php     //7.1版本gitee独立页面模板
+└──gitee_handsome7_2.php     //7.2版本gitee独立页面模板
 ```
 
 #### 说明
