@@ -14,19 +14,21 @@ typecho 博客程序，handsome 主题 gitee 独立页面，修改自 handsome �
 
 ```text
 ├──gitee_handsome4_5_1.php      //4.5.1版本gitee独立页面模板
-├──gitee_handsome5_0.php       //5.0版本gitee独立页面模板
-├──gitee_handsome5_1.php       //5.1版本gitee独立页面模板
-├──gitee_handsome5_1_1.php       //5.1.1版本gitee独立页面模板
-├──gitee_handsome5_2.php     //5.2版本gitee独立页面模板
-├──gitee_handsome5_3.php     //5.3版本gitee独立页面模板
-├──gitee_handsome5_3_1.php     //5.3.1版本gitee独立页面模板
-├──gitee_handsome6_0.php     //6.0版本gitee独立页面模板
-├──gitee_handsome7_0.php     //7.0版本gitee独立页面模板
-├──gitee_handsome7_1.php     //7.1版本gitee独立页面模板
-├──gitee_handsome7_2.php     //7.2版本gitee独立页面模板
-├──gitee_handsome7_2_1.php    //7.2.1版本gitee独立页面模板
-├──gitee_handsome7_3.php    //7.3版本gitee独立页面模板
-└──gitee_handsome7_3_1.php     //7.3.1版本gitee独立页面模板
+├──gitee_handsome5_0.php        //5.0版本gitee独立页面模板
+├──gitee_handsome5_1.php        //5.1版本gitee独立页面模板
+├──gitee_handsome5_1_1.php      //5.1.1版本gitee独立页面模板
+├──gitee_handsome5_2.php        //5.2版本gitee独立页面模板
+├──gitee_handsome5_3.php        //5.3版本gitee独立页面模板
+├──gitee_handsome5_3_1.php      //5.3.1版本gitee独立页面模板
+├──gitee_handsome6_0.php        //6.0版本gitee独立页面模板
+├──gitee_handsome7_0.php        //7.0版本gitee独立页面模板
+├──gitee_handsome7_1.php        //7.1版本gitee独立页面模板
+├──gitee_handsome7_2.php        //7.2版本gitee独立页面模板
+├──gitee_handsome7_2_1.php      //7.2.1版本gitee独立页面模板
+├──gitee_handsome7_3.php        //7.3版本gitee独立页面模板
+├──gitee_handsome7_3_1.php      //7.3.1版本gitee独立页面模板
+├──gitee_handsome8_0.php        //8.0版本gitee独立页面模板
+└──gitee_handsome8_1.php        //8.1版本gitee独立页面模板
 ```
 
 #### 说明
