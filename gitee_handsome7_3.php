@@ -66,8 +66,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
        $githubUser = $this->fields->gitee;
 
        if ($githubUser == "" || $githubUser == null){
-           echo '<script>$(".github_tips").text("请填写正确的gitee用户名，主题检查github用户为空或者错误，已经切换rumosky用户仓库项目。");</script>';
-           $githubUser = 'rumosky_admmin';
+           echo '<script>$(".github_tips").text("请填写正确的gitee用户名，主题检查gitee用户为空或者错误，已经切换rumosky用户仓库项目。");</script>';
+           $githubUser = 'rumosky_admin';
        }
 
        ?>
