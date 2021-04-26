@@ -44,4 +44,4 @@ typecho 博客程序，handsome 主题 gitee 独立页面，修改自 handsome �
 
 #### 反馈建议
 
-请在文章底部留言：[typecho 博客 gitee 独立页面](https://www.rumosky.com/archives/97.html)
+请在文章底部留言：[typecho 博客 gitee 独立页面](https://rumosky.com/archives/74)
