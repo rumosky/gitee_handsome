@@ -7,7 +7,7 @@ typecho 博客程序，handsome 主题 gitee 独立页面，修改自 handsome �
 
 #### 项目地址
 
-1. 国内 gitee 地址：https://gitee.com/rumosky_admin/gitee_handsome
+1. 国内 gitee 地址：https://gitee.com/rumosky/gitee_handsome
 2. GitHub 地址：https://github.com/rumosky/gitee_handsome
 
 #### 目录结构
@@ -44,4 +44,4 @@ typecho 博客程序，handsome 主题 gitee 独立页面，修改自 handsome �
 
 #### 反馈建议
 
-请在文章底部留言：[typecho 博客 gitee 独立页面](https://rumosky.com/archives/74)
+请在文章底部留言：[typecho 博客 gitee 独立页面](https://rumosky.com/archives/6)
